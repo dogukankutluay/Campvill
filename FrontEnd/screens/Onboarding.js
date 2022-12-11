@@ -1,5 +1,5 @@
 import {View, Text, StatusBar, Image} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 import Swiper from 'react-native-swiper';
 // Syles
@@ -33,6 +33,7 @@ const Swipe = props => {
 };
 
 const Onboarding = () => {
+  const [swipeIndex, setSwipeIndex] = useState(0);
   const swipes = [
     {
       image: Image1,
@@ -54,20 +55,42 @@ const Onboarding = () => {
       title: 'There Is Much More',
       desc: 'We have bunch of other cool features. which is super helpful for your next camping trip. so what are you waiting for?',
     },
+    {
+      image: Image2,
+      title: 'Capture Your Memories',
+      desc: 'We know that catching photos are necessary in your trip. that’s why we have built-in camera and gallery feature.',
+    },
   ];
   return (
     <View style={onboardingPageStyle.container}>
       <StatusBar backgroundColor={'#FFFFFF'} barStyle="dark-content" />
       <Swiper
+        onIndexChanged={index => {
+          setSwipeIndex(index);
+        }}
         dot={<Image source={Dot} style={onboardingPageStyle.swipeDot} />}
         activeDot={
           <Image source={ActiveDot} style={onboardingPageStyle.swipeDot} />
         }
         prevButton={
-          <Image style={onboardingPageStyle.swipeButton} source={PrevButton} />
+          <View>
+            {swipeIndex != 0 && (
+              <Image
+                style={onboardingPageStyle.swipeButton}
+                source={PrevButton}
+              />
+            )}
+          </View>
         }
         nextButton={
-          <Image style={onboardingPageStyle.swipeButton} source={NextButton} />
+          <View>
+            {swipeIndex != swipes.length - 1 && (
+              <Image
+                style={onboardingPageStyle.swipeButton}
+                source={NextButton}
+              />
+            )}
+          </View>
         }
         showsButtons={true}>
         {swipes.map((swipe, index) => {
