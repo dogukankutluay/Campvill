@@ -7,6 +7,9 @@ import {onboardingPageStyle} from '../styles/screen';
 
 //Assets Swiper Images
 
+//Login Button
+import { LoginButton } from '../components';
+
 //Dots
 import ActiveDot from '../assets/img/onboardingPage/ActiveDot.png';
 import Dot from '../assets/img/onboardingPage/Dot.png';
@@ -55,11 +58,6 @@ const Onboarding = () => {
       title: 'There Is Much More',
       desc: 'We have bunch of other cool features. which is super helpful for your next camping trip. so what are you waiting for?',
     },
-    {
-      image: Image2,
-      title: 'Capture Your Memories',
-      desc: 'We know that catching photos are necessary in your trip. that’s why we have built-in camera and gallery feature.',
-    },
   ];
   return (
     <View style={onboardingPageStyle.container}>
@@ -100,7 +98,14 @@ const Onboarding = () => {
                 image={swipe.image}
                 title={swipe.title}
                 desc={swipe.desc}
+                
               />
+              <View>
+              {swipeIndex == swipes.length - 1 && (
+              <LoginButton/>
+            )}
+              
+              </View>
             </View>
           );
         })}

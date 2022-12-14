@@ -6,7 +6,7 @@ const onboardingPageStyle = StyleSheet.create({
   },
   swipeContainer: {
     flex: 1,
-    justifyContent: 'center',
+    marginTop:50,
     alignItems: 'center',
     padding: 20,
   },
@@ -14,7 +14,7 @@ const onboardingPageStyle = StyleSheet.create({
   imageWrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: 8,
   },
   image: {},
   title: {
@@ -25,6 +25,7 @@ const onboardingPageStyle = StyleSheet.create({
     textAlign: 'center',
     color: '#000000',
     marginBottom: 8,
+
   },
   desc: {
     fontStyle: 'normal',
@@ -35,11 +36,12 @@ const onboardingPageStyle = StyleSheet.create({
     color: '#3F3F46',
   },
   swipeButton: {
-    marginTop: 500,
+    marginTop: 320,
     marginHorizontal: 15,
   },
   swipeDot: {
     marginHorizontal: 5,
+    marginBottom: 85
   },
 });
 export default onboardingPageStyle;
