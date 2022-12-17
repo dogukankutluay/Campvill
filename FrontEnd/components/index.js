@@ -1,2 +1,2 @@
-import LoginButton from "./loginButton";
-export {LoginButton};
+import CustomButton from './CustomButton';
+export {CustomButton};

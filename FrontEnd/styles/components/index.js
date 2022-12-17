@@ -1,2 +1,2 @@
-import loginButtonStyle from "./loginButtonStyle";
-export {loginButtonStyle};
+import buttonStyle from './customButton';
+export {buttonStyle};

@@ -1,14 +1,14 @@
-import {View, Text, StatusBar, Image} from 'react-native';
+import {View, Text, StatusBar, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 
 import Swiper from 'react-native-swiper';
 // Syles
 import {onboardingPageStyle} from '../styles/screen';
-
+import {buttonStyle} from '../styles/components';
 //Assets Swiper Images
 
 //Login Button
-import { LoginButton } from '../components';
+import {CustomButton} from '../components';
 
 //Dots
 import ActiveDot from '../assets/img/onboardingPage/ActiveDot.png';
@@ -35,7 +35,7 @@ const Swipe = props => {
   );
 };
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
   const [swipeIndex, setSwipeIndex] = useState(0);
   const swipes = [
     {
@@ -59,6 +59,7 @@ const Onboarding = () => {
       desc: 'We have bunch of other cool features. which is super helpful for your next camping trip. so what are you waiting for?',
     },
   ];
+
   return (
     <View style={onboardingPageStyle.container}>
       <StatusBar backgroundColor={'#FFFFFF'} barStyle="dark-content" />
@@ -98,13 +99,27 @@ const Onboarding = () => {
                 image={swipe.image}
                 title={swipe.title}
                 desc={swipe.desc}
-                
               />
               <View>
-              {swipeIndex == swipes.length - 1 && (
-              <LoginButton/>
-            )}
-              
+                {swipeIndex == swipes.length - 1 && (
+                  <>
+                    <CustomButton
+                      btnClick={() => {
+                        navigation.navigate('Login');
+                      }}
+                      btnText={'Log In'}
+                    />
+                    <View style={buttonStyle.container}>
+                      <Text style={buttonStyle.registerDesc}>
+                        Don’t have an Account?
+                      </Text>
+                      <TouchableOpacity
+                        onPress={() => navigation.navigate('SignUp')}>
+                        <Text style={buttonStyle.registerBtn}> Register</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </>
+                )}
               </View>
             </View>
           );
