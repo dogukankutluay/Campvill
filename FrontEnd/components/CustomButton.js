@@ -1,12 +1,32 @@
 import React from 'react';
-import {View, TouchableOpacity, Text} from 'react-native';
+import {View, TouchableOpacity, Text, Button} from 'react-native';
 import {buttonStyle} from '../styles/components';
 
-const CustomButton = ({btnText, btnClick}) => {
+const CustomButton = ({
+  btnText,
+  btnClick,
+  type = 'primary',
+  forgetPassShow,
+}) => {
+  const stylesButton = {
+    primary: buttonStyle.btn,
+    light: buttonStyle.lightBtnStyle,
+  };
+  const styleButtonText = {
+    primary: buttonStyle.login,
+    light: buttonStyle.lightBtnTextStyle,
+  };
+
   return (
     <View>
-      <TouchableOpacity onPress={btnClick} style={buttonStyle.btn}>
-        <Text style={buttonStyle.login}>{btnText}</Text>
+      {forgetPassShow && (
+        <TouchableOpacity style={buttonStyle.forgetPassword}>
+          <Text style={buttonStyle.forgetPasswordText}>Forget Password</Text>
+        </TouchableOpacity>
+      )}
+
+      <TouchableOpacity onPress={btnClick} style={stylesButton[type]}>
+        <Text style={styleButtonText[type]}>{btnText}</Text>
       </TouchableOpacity>
     </View>
   );
