@@ -7,6 +7,7 @@ const CustomButton = ({
   btnClick,
   type = 'primary',
   forgetPassShow,
+  forgetPasswordOnClick,
 }) => {
   const stylesButton = {
     primary: buttonStyle.btn,
@@ -20,7 +21,9 @@ const CustomButton = ({
   return (
     <View>
       {forgetPassShow && (
-        <TouchableOpacity style={buttonStyle.forgetPassword}>
+        <TouchableOpacity
+          onPress={forgetPasswordOnClick}
+          style={buttonStyle.forgetPassword}>
           <Text style={buttonStyle.forgetPasswordText}>Forget Password</Text>
         </TouchableOpacity>
       )}

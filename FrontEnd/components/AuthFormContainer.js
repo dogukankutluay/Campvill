@@ -17,6 +17,7 @@ const AuthFormContainer = ({children, forgetPassShow, navigation}) => {
       <Image source={blackLogo} style={authFormContainerStyle.blackLogo} />
       {children}
       <CustomButton
+        forgetPasswordOnClick={() => navigation.navigate('ForgetPassword')}
         btnClick={() => navigation.navigate('Login')}
         btnText={'Log In'}
         forgetPassShow={forgetPassShow}

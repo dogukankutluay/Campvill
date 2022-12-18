@@ -1,4 +1,5 @@
 import CustomButton from './CustomButton';
 import AuthFormContainer from './AuthFormContainer';
 import CustomTextInput from './CustomTextInput';
-export {CustomButton, AuthFormContainer, CustomTextInput};
+import AuthAfterContainer from './AuthAfterContainer';
+export {CustomButton, AuthFormContainer, CustomTextInput, AuthAfterContainer};
