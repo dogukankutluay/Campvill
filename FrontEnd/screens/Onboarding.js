@@ -100,7 +100,11 @@ const Onboarding = ({navigation}) => {
                 title={swipe.title}
                 desc={swipe.desc}
               />
-              <View>
+            </View>
+          );
+        })}
+      </Swiper>
+      <View  style={buttonStyle.visibleBtn}>
                 {swipeIndex == swipes.length - 1 && (
                   <>
                     <CustomButton
@@ -121,10 +125,6 @@ const Onboarding = ({navigation}) => {
                   </>
                 )}
               </View>
-            </View>
-          );
-        })}
-      </Swiper>
     </View>
   );
 };
