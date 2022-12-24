@@ -13,7 +13,7 @@ import {
   NewPassword,
   SuccessFull,
 } from './screens';
-
+console.log()
 // Stack
 const Stack = createNativeStackNavigator();
 const App = () => {
