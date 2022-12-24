@@ -64,6 +64,11 @@ const buttonStyle = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
   },
+  visibleBtn:{
+    position:'absolute',
+    bottom:30,
+    left:38,
+  },
 });
 
 export default buttonStyle;
