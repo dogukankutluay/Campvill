@@ -6,6 +6,7 @@ import ForgetPassword from './ForgetPassword';
 import ConfirmOtp from './ConfirmOtp';
 import NewPassword from './NewPassword';
 import SuccessFull from './SuccessFull';
+import AddTrip from './AddTrip';
 export {
   StartPage,
   Onboarding,
@@ -15,4 +16,5 @@ export {
   ConfirmOtp,
   NewPassword,
   SuccessFull,
+  AddTrip,
 };

@@ -12,6 +12,7 @@ import {
   ConfirmOtp,
   NewPassword,
   SuccessFull,
+  AddTrip,
 } from './screens';
 // Stack
 const Stack = createNativeStackNavigator();
@@ -21,7 +22,7 @@ const App = () => {
       <Stack.Navigator
         initialRouteName="StartPage"
         screenOptions={{headerShown: false}}>
-        <Stack.Screen name="StartPage" component={StartPage} />
+        {/* <Stack.Screen name="StartPage" component={StartPage} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="SignUp" component={SignUp} />
@@ -29,6 +30,8 @@ const App = () => {
         <Stack.Screen name="ConfirmOtp" component={ConfirmOtp} />
         <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="SuccessFull" component={SuccessFull} />
+         */}
+        <Stack.Screen name="AddTrip" component={AddTrip} />
       </Stack.Navigator>
     </NavigationContainer>
   );
