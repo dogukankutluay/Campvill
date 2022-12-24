@@ -1,4 +1,4 @@
-import {Text, View, StatusBar, Image} from 'react-native';
+import {Text, View, StatusBar, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 //Assets
@@ -8,25 +8,30 @@ import {authAfterContainerStyle} from '../styles/components';
 
 //Components
 import {CustomButton} from '../components';
-const AuthAfterContainer = ({children}) => {
+const AuthAfterContainer = ({
+  children,
+  headerTitle,
+  descText,
+  btnClick,
+  navigation,
+}) => {
   return (
     <View style={authAfterContainerStyle.container}>
       <StatusBar backgroundColor={'#FFFFFF'} barStyle="dark-content" />
       <View style={authAfterContainerStyle.header}>
-        <Image
-          source={ChevronLeftIcon}
-          style={authAfterContainerStyle.leftIcon}
-        />
-        <Text style={authAfterContainerStyle.headerText}>Forget Password</Text>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={authAfterContainerStyle.leftIcon}>
+          <Image source={ChevronLeftIcon} />
+        </TouchableOpacity>
+
+        <Text style={authAfterContainerStyle.headerText}>{headerTitle}</Text>
       </View>
       <View style={authAfterContainerStyle.desc}>
-        <Text style={authAfterContainerStyle.descText}>
-          To get your new password you need to put your phone number down below.
-          and we will send you an OTP on that number for confirmation.
-        </Text>
+        <Text style={authAfterContainerStyle.descText}>{descText}</Text>
       </View>
       {children}
-      <CustomButton btnText={'Send'} />
+      <CustomButton btnText={'Send'} btnClick={btnClick} />
     </View>
   );
 };
