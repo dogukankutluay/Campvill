@@ -8,14 +8,16 @@ const CustomButton = ({
   type = 'primary',
   forgetPassShow,
   forgetPasswordOnClick,
+  style = {},
 }) => {
+  // override
   const stylesButton = {
-    primary: buttonStyle.btn,
-    light: buttonStyle.lightBtnStyle,
+    primary: {...buttonStyle.btn, ...style},
+    light: {...buttonStyle.lightBtnStyle, ...style},
   };
   const styleButtonText = {
-    primary: buttonStyle.login,
-    light: buttonStyle.lightBtnTextStyle,
+    primary: {...buttonStyle.login},
+    light: {...buttonStyle.lightBtnTextStyle},
   };
 
   return (

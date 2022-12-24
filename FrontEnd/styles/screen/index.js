@@ -2,5 +2,15 @@ import onboardingPageStyle from './onboardingPageStyle';
 import startPageStyle from './startPageStyle';
 import signUpStyle from './signUpStyle';
 import loginStyle from './loginStyle';
-
-export {onboardingPageStyle, startPageStyle, signUpStyle, loginStyle};
+import addTripStyle from './addTrip';
+import locationSearchStyle from './locationSearch';
+import locationViewStyle from './locationView';
+export {
+  locationSearchStyle,
+  locationViewStyle,
+  onboardingPageStyle,
+  addTripStyle,
+  startPageStyle,
+  signUpStyle,
+  loginStyle,
+};

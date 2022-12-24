@@ -12,6 +12,9 @@ import {
   ConfirmOtp,
   NewPassword,
   SuccessFull,
+  AddTrip,
+  LocationSearch,
+  LocationView,
 } from './screens';
 // Stack
 const Stack = createNativeStackNavigator();
@@ -29,6 +32,10 @@ const App = () => {
         <Stack.Screen name="ConfirmOtp" component={ConfirmOtp} />
         <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="SuccessFull" component={SuccessFull} />
+
+        <Stack.Screen name="AddTrip" component={AddTrip} />
+        <Stack.Screen name="LocationSearch" component={LocationSearch} />
+        <Stack.Screen name="LocationView" component={LocationView} />
       </Stack.Navigator>
     </NavigationContainer>
   );
