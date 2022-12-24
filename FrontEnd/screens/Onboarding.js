@@ -107,7 +107,7 @@ const Onboarding = ({navigation}) => {
       <View  style={buttonStyle.visibleBtn}>
                 {swipeIndex == swipes.length - 1 && (
                   <>
-                    <CustomButton
+                  <CustomButton
                       btnClick={() => {
                         navigation.navigate('Login');
                       }}
