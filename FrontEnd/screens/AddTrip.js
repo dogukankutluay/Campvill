@@ -25,6 +25,7 @@ export default function AddTrip({navigation}) {
       <CustomTextInput labelText={'Trip Name'} />
       <CustomTextInput labelText={'Location'} />
       <CustomButton
+        btnClick={() => navigation.navigate('LocationSearch')}
         btnText={'View Locations'}
         type="light"
         style={{width: 150, marginLeft: 40, paddingHorizontal: 15}}
