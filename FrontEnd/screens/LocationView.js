@@ -4,10 +4,8 @@ import React from 'react';
 //Styles
 import {locationViewStyle} from '../styles/screen';
 
-
 //components
-import { CustomButton } from '../components';
-
+import {CustomButton} from '../components';
 
 export default function LocationView({route}) {
   const data = route.params.card;
@@ -20,14 +18,12 @@ export default function LocationView({route}) {
       />
       <View style={{marginTop: StatusBar.currentHeight}}>
         <View style={locationViewStyle.textContainer}>
-        <Text style={locationViewStyle.textTitle}>{data.title}</Text>
-        <Text style={locationViewStyle.textDecs}>{data.desc}</Text>
-        <Text style={locationViewStyle.textDecs2}>{data.descDetail}</Text>
-        <CustomButton btnText={'Select'} />
+          <Text style={locationViewStyle.textTitle}>{data.title}</Text>
+          <Text style={locationViewStyle.textDecs}>{data.desc}</Text>
+          <Text style={locationViewStyle.textDecs2}>{data.descDetail}</Text>
+          <CustomButton btnText={'Select'} />
+        </View>
       </View>
-        </View>     
-        
-
     </ImageBackground>
   );
 }

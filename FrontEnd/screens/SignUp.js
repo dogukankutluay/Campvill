@@ -16,5 +16,4 @@ const SignUp = ({navigation}) => {
     </AuthFormContainer>
   );
 };
-// abi burdamısın bilmiyorum ama böyle işi sikiyim aq
 export default SignUp;
