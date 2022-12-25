@@ -22,7 +22,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="StartPage"
+        initialRouteName="LocationSearch"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="StartPage" component={StartPage} />
         <Stack.Screen name="Onboarding" component={Onboarding} />

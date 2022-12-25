@@ -5,7 +5,7 @@ import {View, Text, ScrollView} from 'react-native';
 import {signUpStyle} from '../styles/screen';
 
 //Components
-import {AuthFormContainer, CustomTextInput} from '../components';
+import {AuthFormContainer, CustomButton, CustomTextInput} from '../components';
 const SignUp = ({navigation}) => {
   return (
     <AuthFormContainer navigation={navigation} forgetPassShow={false}>
@@ -16,5 +16,5 @@ const SignUp = ({navigation}) => {
     </AuthFormContainer>
   );
 };
-
+// abi burdamısın bilmiyorum ama böyle işi sikiyim aq
 export default SignUp;

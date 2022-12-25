@@ -14,6 +14,7 @@ import SearchPng from '../assets/img/search.png';
 
 import Card1 from '../assets/img/card-1.png';
 import Card2 from '../assets/img/card-2.png';
+import Card3 from '../assets/img/Card3.png';
 
 //Styles
 import {locationSearchStyle} from '../styles/screen';
@@ -26,13 +27,22 @@ export default function LocationSearch({navigation}) {
     {
       title: 'Catalina Island',
       desc: 'Los Angeles California',
+      descDetail: 'One of California’s Channel Islands, lies southwest of Los Angeles. It s known for its wildlife, dive sites and Mt. Orizaba, its highest peak. The resort town of Two Harbors lies to the north. Best for Campers',
       image: Card1,
     },
     {
       title: 'Kösedağ',
       desc: 'Sivas ın köse dağı',
       image: Card2,
+      descDetail:'Havv Havv Havvv, Kösedağ Muharebesi, 3 Temmuz 1243 tarihinde Anadolu Selçuklu Devleti ile Moğollar arasında gerçekleşen ve Selçuklu Devleti nin yenilip Moğol tabiiyetine girmesiyle sonuçlanan muharebedir. Kösedağ Muharebesi, sonuçları bakımından Türk tarihi içerisinde özel bir yere sahiptir',
     },
+    {
+      title: 'Furkan Kaplan',
+      desc: 'Serseri Şekilde Motor Kullanma ve Boş Yapma Sanatı',
+      image: Card3,
+      descDetail:'Tam bir uzay Boşlugu cinsinden boş yapıyor.Anlamsız Atarlı UBER Boş Sözler. Serseri Bir Bakış Atma ve Magrur Gözlükler.Tam bir Pussy magnet',
+    },
+
   ];
 
   return (
