@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 //Asetts
 import ChevronLeft from '../assets/img/chevron-left.png';
@@ -19,8 +19,9 @@ import {CustomTextInput, CustomButton} from '../components';
 import {addTripStyle} from '../styles/screen';
 
 export default function AddTrip({navigation, route}) {
+  const [users, setUsers] = useState([]);
   // STATIC DATA
-  const users = [
+  const staticUsers = [
     {
       id: '12345',
       image: 'https://source.unsplash.com/600x600/?person',
@@ -34,7 +35,15 @@ export default function AddTrip({navigation, route}) {
       image: 'https://source.unsplash.com/600x600/?person',
     },
   ];
-
+  useEffect(() => {
+    const routeInUserID = route?.params?.userId;
+    if (routeInUserID) {
+      const findUser = staticUsers.find(user => user.id == routeInUserID);
+      if (findUser) {
+        setUsers([...users, findUser]);
+      }
+    }
+  }, [route?.params?.userId]);
   return (
     <View style={addTripStyle.container}>
       <View style={addTripStyle.header}>
@@ -60,9 +69,12 @@ export default function AddTrip({navigation, route}) {
 
       <View style={addTripStyle.teamMatesContainer}>
         <Text style={addTripStyle.teamMatesLabel}>Teammates</Text>
-        {/* <View style={addTripStyle.teamMatesListContainer}>
-          <Image source={Plus} />
-        </View> */}
+        {!users.length && (
+          <View style={addTripStyle.teamMatesListContainer}>
+            <Image source={Plus} />
+          </View>
+        )}
+
         <ScrollView
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}

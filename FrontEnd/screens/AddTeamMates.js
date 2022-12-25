@@ -1,5 +1,5 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 //Asetts
 import ChevronLeft from '../assets/img/chevron-left.png';
@@ -10,6 +10,7 @@ import {CustomButton, CustomTextInput} from '../components';
 import {addTripStyle, addTeamMatesStyle} from '../styles/screen';
 
 export default function AddTeamMates({navigation}) {
+  const [personID, setPersonID] = useState('');
   return (
     <View style={addTripStyle.container}>
       <View style={addTripStyle.header}>
@@ -27,8 +28,15 @@ export default function AddTeamMates({navigation}) {
           recieve the notification of invite. When he accept the request he’ll
           automatically add on to your team.
         </Text>
-        <CustomTextInput labelText={'ID'} />
-        <CustomButton btnText={'Sent Request'} style={addTeamMatesStyle.btn} />
+        <CustomTextInput
+          labelText={'ID'}
+          onChangeText={value => setPersonID(value)}
+        />
+        <CustomButton
+          btnClick={() => navigation.navigate('AddTrip', {userId: personID})}
+          btnText={'Sent Request'}
+          style={addTeamMatesStyle.btn}
+        />
       </View>
     </View>
   );
