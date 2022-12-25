@@ -15,6 +15,7 @@ import {
   AddTrip,
   LocationSearch,
   LocationView,
+  AddTeamMates,
 } from './screens';
 // Stack
 const Stack = createNativeStackNavigator();
@@ -36,6 +37,8 @@ const App = () => {
         <Stack.Screen name="AddTrip" component={AddTrip} />
         <Stack.Screen name="LocationSearch" component={LocationSearch} />
         <Stack.Screen name="LocationView" component={LocationView} />
+
+        <Stack.Screen name="AddTeamMates" component={AddTeamMates} />
       </Stack.Navigator>
     </NavigationContainer>
   );

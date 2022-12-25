@@ -5,6 +5,7 @@ import loginStyle from './loginStyle';
 import addTripStyle from './addTrip';
 import locationSearchStyle from './locationSearch';
 import locationViewStyle from './locationView';
+import addTeamMatesStyle from './addTeamMates';
 export {
   locationSearchStyle,
   locationViewStyle,
@@ -13,4 +14,5 @@ export {
   startPageStyle,
   signUpStyle,
   loginStyle,
+  addTeamMatesStyle,
 };
