@@ -13,7 +13,7 @@ import ChevronLeft from '../assets/img/chevron-left.png';
 import Plus from '../assets/img/plus.png';
 
 //Components
-import {CustomTextInput, CustomButton} from '../components';
+import {CustomTextInput, CustomButton, AddTripDatePicker} from '../components';
 
 //Styles
 import {addTripStyle} from '../styles/screen';
@@ -45,7 +45,9 @@ export default function AddTrip({navigation, route}) {
     }
   }, [route?.params?.userId]);
   return (
-    <View style={addTripStyle.container}>
+    <ScrollView
+      contentContainerStyle={{paddingBottom: 50}}
+      style={addTripStyle.container}>
       <View style={addTripStyle.header}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -95,6 +97,10 @@ export default function AddTrip({navigation, route}) {
           style={{paddingHorizontal: 15, width: 180}}
         />
       </View>
-    </View>
+      <AddTripDatePicker />
+      <View style={{alignItems: 'center'}}>
+        <CustomButton btnText={'Continue'} style={{marginTop: 24}} />
+      </View>
+    </ScrollView>
   );
 }

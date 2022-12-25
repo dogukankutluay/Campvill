@@ -6,12 +6,11 @@ const customTextInputStyle = StyleSheet.create({
   },
   input: {
     backgroundColor: '#FAFAFA',
+    borderColor: '#F4F4F5',
+    borderWidth: 1,
     borderRadius: 10,
     paddingLeft: 10,
     marginTop: 8,
-
-    borderColor: '#F4F4F5',
-    borderWidth: 1,
   },
   label: {
     fontStyle: 'normal',
