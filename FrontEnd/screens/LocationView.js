@@ -21,7 +21,7 @@ export default function LocationView({route}) {
           <Text style={locationViewStyle.textTitle}>{data.title}</Text>
           <Text style={locationViewStyle.textDecs}>{data.desc}</Text>
           <Text style={locationViewStyle.textDecs2}>{data.descDetail}</Text>
-          <CustomButton btnText={'Select'} />
+          <CustomButton btnText={'Select Location'} />
         </View>
       </View>
     </ImageBackground>
