@@ -20,7 +20,7 @@ import {CustomButton} from '../components';
 //ASsets
 import ChevronLeft from '../assets/img/chevron-left-white.png';
 
-export default function LocationView({route}) {
+export default function LocationView({route, navigation}) {
   const data = route.params.card;
   return (
     <ImageBackground source={data.image} style={locationViewStyle.container}>
@@ -29,7 +29,9 @@ export default function LocationView({route}) {
         translucent={true}
         barStyle="light-content"
       />
-      <TouchableOpacity style={locationViewStyle.chevronLeftIcon}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={locationViewStyle.chevronLeftIcon}>
         <Image source={ChevronLeft} />
       </TouchableOpacity>
       <LinearGradient colors={['transparent', '#000000']}>
@@ -41,6 +43,7 @@ export default function LocationView({route}) {
             <CustomButton
               btnText={'Select Location'}
               style={locationViewStyle.btn}
+              btnClick={() => navigation.navigate('AddTrip', {data})}
             />
           </View>
         </View>

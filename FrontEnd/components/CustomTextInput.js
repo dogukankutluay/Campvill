@@ -7,6 +7,7 @@ const CustomTextInput = ({
   labelText,
   onChangeText,
   secureTextEntry = false,
+  value,
 }) => {
   return (
     <View style={customTextInputStyle.container}>
@@ -15,6 +16,7 @@ const CustomTextInput = ({
         onChangeText={onChangeText}
         style={customTextInputStyle.input}
         secureTextEntry={secureTextEntry}
+        value={value}
       />
     </View>
   );

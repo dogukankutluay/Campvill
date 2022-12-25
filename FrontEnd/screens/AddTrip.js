@@ -10,7 +10,7 @@ import {CustomTextInput, CustomButton} from '../components';
 //Styles
 import {addTripStyle} from '../styles/screen';
 
-export default function AddTrip({navigation}) {
+export default function AddTrip({navigation, route}) {
   return (
     <View style={addTripStyle.container}>
       <View style={addTripStyle.header}>
@@ -23,7 +23,10 @@ export default function AddTrip({navigation}) {
       </View>
       <StatusBar backgroundColor={'white'} barStyle="dark-content" />
       <CustomTextInput labelText={'Trip Name'} />
-      <CustomTextInput labelText={'Location'} />
+      <CustomTextInput
+        labelText={'Location'}
+        value={route.params?.data?.title || ''}
+      />
       <CustomButton
         btnClick={() => navigation.navigate('LocationSearch')}
         btnText={'View Locations'}
