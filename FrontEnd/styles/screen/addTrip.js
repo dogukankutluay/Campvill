@@ -55,5 +55,10 @@ const addTripStyle = StyleSheet.create({
     marginRight: 16,
     borderRadius: 15,
   },
+  circleBtn:{
+    position:'absolute',
+    top:'33%',
+    right:'15%',
+  }
 });
 export default addTripStyle;

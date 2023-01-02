@@ -11,7 +11,7 @@ import React, {useState, useEffect} from 'react';
 //Asetts
 import ChevronLeft from '../assets/img/chevron-left.png';
 import Plus from '../assets/img/plus.png';
-
+import Circle from '../assets/img/circle.png';
 //Components
 import {CustomTextInput, CustomButton, AddTripDatePicker} from '../components';
 
@@ -62,6 +62,10 @@ export default function AddTrip({navigation, route}) {
         labelText={'Location'}
         value={route.params?.data?.title || ''}
       />
+      <TouchableOpacity
+          style={addTripStyle.circleBtn}>
+          <Image source={Circle} />
+      </TouchableOpacity>
       <CustomButton
         btnClick={() => navigation.navigate('LocationSearch')}
         btnText={'View Locations'}
@@ -97,7 +101,7 @@ export default function AddTrip({navigation, route}) {
           style={{paddingHorizontal: 15, width: 180}}
         />
       </View>
-      <AddTripDatePicker />
+      <AddTripDatePicker/>
       <View style={{alignItems: 'center'}}>
         <CustomButton btnText={'Continue'} style={{marginTop: 24}} />
       </View>
