@@ -1,10 +1,10 @@
-import {Text, View} from 'react-native';
+import {Text, View,State} from 'react-native';
 import React from 'react';
 //Library
 import OTPInputView from '@twotalltotems/react-native-otp-input';
-
 //Components
 import {AuthAfterContainer} from '../components';
+
 const ConfirmOtp = ({navigation, route}) => {
   return (
     <AuthAfterContainer
@@ -24,12 +24,15 @@ const ConfirmOtp = ({navigation, route}) => {
             height: 80,
           }}
           pinCount={4}
-          onCodeFilled={code => {}}
           codeInputFieldStyle={{
             fontWeight: '400',
             fontSize: 22,
             color: '#000000',
             borderWidth: 0,
+            borderBottomWidth: 1,
+          }}
+          codeInputHighlightStyle={{
+            borderColor: "#03DAC6",
           }}
         />
       </View>
