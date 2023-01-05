@@ -4,6 +4,7 @@ import CustomTextInput from './CustomTextInput';
 import AuthAfterContainer from './AuthAfterContainer';
 import Card from './Card';
 import AddTripDatePicker from './AddTripDatePicker';
+import Footer from './Footer';
 export {
   Card,
   CustomButton,
@@ -11,4 +12,5 @@ export {
   CustomTextInput,
   AuthAfterContainer,
   AddTripDatePicker,
+  Footer,
 };

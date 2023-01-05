@@ -29,7 +29,6 @@ const CustomButton = ({
           <Text style={buttonStyle.forgetPasswordText}>Forget Password</Text>
         </TouchableOpacity>
       )}
-
       <TouchableOpacity onPress={btnClick} style={stylesButton[type]}>
         <Text style={styleButtonText[type]}>{btnText}</Text>
       </TouchableOpacity>
