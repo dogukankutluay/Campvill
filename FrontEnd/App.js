@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
 //Screens
 import {
   StartPage,
@@ -15,6 +14,8 @@ import {
   AddTrip,
   LocationSearch,
   LocationView,
+  AddTeamMates,
+  Activities,
 } from './screens';
 // Stack
 const Stack = createNativeStackNavigator();
@@ -22,7 +23,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="StartPage"
+        initialRouteName="Activities"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="StartPage" component={StartPage} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
@@ -32,10 +33,11 @@ const App = () => {
         <Stack.Screen name="ConfirmOtp" component={ConfirmOtp} />
         <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="SuccessFull" component={SuccessFull} />
-
         <Stack.Screen name="AddTrip" component={AddTrip} />
         <Stack.Screen name="LocationSearch" component={LocationSearch} />
         <Stack.Screen name="LocationView" component={LocationView} />
+        <Stack.Screen name="AddTeamMates" component={AddTeamMates} />
+        <Stack.Screen name="Activities" component={Activities} />
       </Stack.Navigator>
     </NavigationContainer>
   );

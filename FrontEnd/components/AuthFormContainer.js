@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Text, ScrollView, Image} from 'react-native';
 
 //Assets
@@ -10,6 +10,8 @@ import {authFormContainerStyle} from '../styles/components';
 //Components
 import {CustomButton} from './';
 const AuthFormContainer = ({children, forgetPassShow, navigation}) => {
+  const [email, setEmail] = useState('');
+
   return (
     <ScrollView
       contentContainerStyle={{alignItems: 'center', paddingBottom: 20}}

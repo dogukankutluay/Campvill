@@ -6,6 +6,7 @@ const buttonStyle = StyleSheet.create({
     backgroundColor: '#84CC16',
     borderRadius: 15,
     marginTop: 50,
+    justifyContent: 'center',
   },
   lightBtnStyle: {
     width: 335,
@@ -25,15 +26,13 @@ const buttonStyle = StyleSheet.create({
     marginTop: 12,
   },
   login: {
-    marginLeft: 148.05,
-    width: 41,
-    height: 21,
-    fontWeight: '500',
-    fontSize: 14,
-    lineHeight: 21,
     textAlign: 'center',
-    color: '#FFFFFF',
-    marginTop: 12,
+    justifyContent: 'center',
+    color: 'white',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: 16,
+    lineHeight: 24,
   },
   container: {
     flexDirection: 'row',
@@ -64,10 +63,10 @@ const buttonStyle = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
   },
-  visibleBtn:{
-    position:'absolute',
-    bottom:30,
-    left:38,
+  visibleBtn: {
+    position: 'absolute',
+    bottom: 30,
+    left: 38,
   },
 });
 

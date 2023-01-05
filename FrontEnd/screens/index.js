@@ -9,6 +9,8 @@ import SuccessFull from './SuccessFull';
 import AddTrip from './AddTrip';
 import LocationSearch from './LocationSearch';
 import LocationView from './LocationView';
+import AddTeamMates from './AddTeamMates';
+import Activities from './Activities';
 export {
   LocationSearch,
   LocationView,
@@ -21,4 +23,6 @@ export {
   NewPassword,
   SuccessFull,
   AddTrip,
+  AddTeamMates,
+  Activities,
 };
