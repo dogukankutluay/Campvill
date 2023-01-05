@@ -1,0 +1,53 @@
+import { StyleSheet } from "react-native";
+
+const activitiesStyle = StyleSheet.create({
+    container:{
+        flex:1,
+    },
+    top:{
+        display:'flex',
+        height:40,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginTop:24,
+        marginLeft:24,
+        marginRight:24,
+        alignItems:'center',
+    },
+    days:{
+        display:'flex',
+        height:40,
+        flexDirection:'row',
+        alignItems:'center',
+        marginTop:24,
+        marginLeft:24,
+        marginRight:24,
+    },
+    text:{
+        fontSize:20,
+        lineHeight:20,
+        fontWeight:'600',
+    },
+    daytext:{
+        fontSize:32,
+        lineHeight:32,
+        fontWeight:'600',
+        marginRight:10,
+    },
+    dayremain:{
+        fontSize:14,
+        lineHeight:21,
+        fontWeight:'400',
+        position:'absolute',
+        right:0,
+    },
+    resim:{
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:80,
+        marginLeft:24,
+        marginRight:24,
+    },
+  });
+export default activitiesStyle;

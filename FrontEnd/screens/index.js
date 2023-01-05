@@ -10,6 +10,7 @@ import AddTrip from './AddTrip';
 import LocationSearch from './LocationSearch';
 import LocationView from './LocationView';
 import AddTeamMates from './AddTeamMates';
+import Activities from './Activities';
 export {
   LocationSearch,
   LocationView,
@@ -23,4 +24,5 @@ export {
   SuccessFull,
   AddTrip,
   AddTeamMates,
+  Activities,
 };
