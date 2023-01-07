@@ -38,12 +38,6 @@ const Activities = ({navigation}) => {
         style={{width:114,height:45,borderRadius:10,}}
       />
       </View>
-      <View style={{display:'flex',flexDirection:'row',flex:1}}>
-      <Image source={anasayfa} style={{position:'absolute',bottom:'-50%',zIndex:1,left:'10%',}}></Image>
-      <Image source={feed} style={{position:'absolute',bottom:'-48%',zIndex:1,left:'35%',}}></Image>
-      <Image source={form} style={{position:'absolute',bottom:'-48%',zIndex:1,right:'35.7%',}}></Image>
-      <Image source={profile} style={{position:'absolute',bottom:'-48%',zIndex:1,right:'10%',}}></Image>
-      </View>
       <Footer>
       </Footer>
     </View>
