@@ -12,7 +12,7 @@ const FormRoute = () => <Text>Form</Text>;
 
 const ProfileRoute = () => <Text>Profile</Text>;
 
-const Footer = ({navigation}) => {
+const Footer = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: 'home', title: 'Home',focusedIcon: home},
@@ -20,7 +20,6 @@ const Footer = ({navigation}) => {
     { key: 'form', title: 'Form',focusedIcon: form},
     { key: 'profile', title: 'Profile',focusedIcon: profile},
   ]);
-
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     feed: FeedRoute,
@@ -29,12 +28,11 @@ const Footer = ({navigation}) => {
   });
 
   return (
-    <BottomNavigation style={{position:'relative',zIndex:-1,}}
+    <BottomNavigation barStyle={{backgroundColor:'#84CC16'}}
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
       renderScene={renderScene}
     />
-
   );
 };
 

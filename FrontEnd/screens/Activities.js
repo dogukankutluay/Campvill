@@ -4,10 +4,6 @@ import kare from '../assets/img/onboardingPage/Square.png';
 import arti from '../assets/img/plus.png';
 import gunes from '../assets/img/onboardingPage/Sun.png';
 import active from '../assets/img/onboardingPage/Activities.png';
-import anasayfa from '../assets/img/onboardingPage/Home.png';
-import feed from '../assets/img/onboardingPage/Heart.png';
-import profile from '../assets/img/onboardingPage/Profile.png';
-import form from '../assets/img/onboardingPage/Form.png';
 import activitiesStyle from "../styles/screen/activities";
 import { CustomButton, Footer } from "../components";
 
