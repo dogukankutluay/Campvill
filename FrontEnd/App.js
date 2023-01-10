@@ -16,6 +16,7 @@ import {
   LocationView,
   AddTeamMates,
   Activities,
+  Home,
 } from './screens';
 // Stack
 const Stack = createNativeStackNavigator();
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Activities"
+        initialRouteName="Home"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="StartPage" component={StartPage} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
@@ -38,6 +39,7 @@ const App = () => {
         <Stack.Screen name="LocationView" component={LocationView} />
         <Stack.Screen name="AddTeamMates" component={AddTeamMates} />
         <Stack.Screen name="Activities" component={Activities} />
+        <Stack.Screen name='Home' component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

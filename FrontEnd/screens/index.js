@@ -11,6 +11,7 @@ import LocationSearch from './LocationSearch';
 import LocationView from './LocationView';
 import AddTeamMates from './AddTeamMates';
 import Activities from './Activities';
+import Home from './Home';
 export {
   LocationSearch,
   LocationView,
@@ -25,4 +26,5 @@ export {
   AddTrip,
   AddTeamMates,
   Activities,
+  Home,
 };
