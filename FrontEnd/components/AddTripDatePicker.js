@@ -13,18 +13,21 @@ import ChevronDown from '../assets/img/chevron-down.png';
 const PickerButton = () => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
-    return (
+  return (
     <TouchableOpacity
       onPress={() => setOpen(true)}
       style={addTripDatePickerStlye.dateOpenBtn}>
-      <Text style={addTripDatePickerStlye.pickerText}>Date</Text>
+      <Text style={addTripDatePickerStlye.pickerText}>
+        {String(date.getDate())}-{String(date.getMonth() + 1)}-
+        {String(date.getFullYear())}
+      </Text>
       <Image source={ChevronDown} />
       <DatePicker
         date={date}
         modal
-        mode='date'
-        locale='tr'
-        format='YYYY-MMM-DD'
+        mode="date"
+        locale="tr"
+        format="YYYY-MMM-DD"
         open={open}
         onConfirm={date => {
           setDate(date);
