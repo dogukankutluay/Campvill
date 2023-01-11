@@ -5,8 +5,10 @@ import AuthAfterContainer from './AuthAfterContainer';
 import Card from './Card';
 import AddTripDatePicker from './AddTripDatePicker';
 import Footer from './Footer';
+import PrePareItem from './PrePareItem';
 export {
   Card,
+  PrePareItem,
   CustomButton,
   AuthFormContainer,
   CustomTextInput,

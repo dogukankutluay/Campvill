@@ -20,6 +20,7 @@ import {
   Prepare,
 } from './screens';
 // Stack
+
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
