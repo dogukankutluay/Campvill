@@ -7,6 +7,7 @@ import locationSearchStyle from './locationSearch';
 import locationViewStyle from './locationView';
 import addTeamMatesStyle from './addTeamMates';
 import homeStyle from './home';
+import prepareStyle from './prepare';
 export {
   locationSearchStyle,
   locationViewStyle,
@@ -17,4 +18,5 @@ export {
   loginStyle,
   addTeamMatesStyle,
   homeStyle,
+  prepareStyle,
 };

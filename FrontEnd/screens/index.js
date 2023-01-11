@@ -12,6 +12,7 @@ import LocationView from './LocationView';
 import AddTeamMates from './AddTeamMates';
 import Activities from './Activities';
 import Home from './Home';
+import Prepare from './Prepare';
 export {
   LocationSearch,
   LocationView,
@@ -27,4 +28,5 @@ export {
   AddTeamMates,
   Activities,
   Home,
+  Prepare,
 };
