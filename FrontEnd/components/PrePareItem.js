@@ -1,16 +1,22 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity,Image} from 'react-native';
+import WhiteBox from '../assets/img/onboardingPage/whiteBox.png';
+import GreenBox from '../assets/img/onboardingPage/greenBox.png';
+import Path from '../assets/img/onboardingPage/Path.png';
 //Styles
 import {prePareItemStyle} from '../styles/components';
 
 const prePareItem = () => {
   const [count, setCount] = useState(0);
-
   return (
     <View style={prePareItemStyle.container}>
       <View style={prePareItemStyle.leftContent}>
-        <Text>CH</Text>
-        <Text style={prePareItemStyle.leftText}>Sleeping Bacg</Text>
+        <TouchableOpacity>
+        <Image style={prePareItemStyle.white} source={WhiteBox}></Image>
+        <Image style={prePareItemStyle.path} source={Path}></Image>
+        <Image style={prePareItemStyle.green} source={GreenBox}></Image>
+        </TouchableOpacity>
+        <Text style={prePareItemStyle.leftText}>Sleeping mat or camp bed</Text>
       </View>
       <View style={prePareItemStyle.rightContent}>
         <TouchableOpacity
@@ -28,5 +34,4 @@ const prePareItem = () => {
     </View>
   );
 };
-
 export default prePareItem;

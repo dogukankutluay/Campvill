@@ -38,5 +38,15 @@ const prePareItemStyle = StyleSheet.create({
   inText: {
     color: 'white',
   },
+  green:{
+    position:'absolute',
+    display:'none',
+  },
+  path:{
+  width:16,
+  height:16,
+  position:'absolute',
+  display:'none',
+  },
 });
 export default prePareItemStyle;
