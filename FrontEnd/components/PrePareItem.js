@@ -8,14 +8,17 @@ import {prePareItemStyle} from '../styles/components';
 
 const prePareItem = () => {
   const [count, setCount] = useState(0);
+  
   return (
     <View style={prePareItemStyle.container}>
       <View style={prePareItemStyle.leftContent}>
-        <TouchableOpacity>
         <Image style={prePareItemStyle.white} source={WhiteBox}></Image>
-        <Image style={prePareItemStyle.path} source={Path}></Image>
+        {count>0 &&(        
         <Image style={prePareItemStyle.green} source={GreenBox}></Image>
-        </TouchableOpacity>
+        )}
+        {count>0 && (        
+        <Image style={prePareItemStyle.path} source={Path}></Image>
+        )}
         <Text style={prePareItemStyle.leftText}>Sleeping mat or camp bed</Text>
       </View>
       <View style={prePareItemStyle.rightContent}>
