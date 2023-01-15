@@ -8,7 +8,6 @@ import {prePareItemStyle} from '../styles/components';
 
 const prePareItem = () => {
   const [count, setCount] = useState(0);
-  
   return (
     <View style={prePareItemStyle.container}>
       <View style={prePareItemStyle.leftContent}>
