@@ -4,8 +4,10 @@ const homeStyle = StyleSheet.create({
   container: {
     flex:1,
     backgroundColor:'white',
+    zIndex:-1,
   },
   story: {
+    marginTop:10,
     height:'15%',
   },
   resim:{
@@ -48,7 +50,7 @@ const homeStyle = StyleSheet.create({
   },
   touchRight:{
     position:'absolute',
-    right:0,
+    right:0,       
   },
   startResim:{
     width:30, 

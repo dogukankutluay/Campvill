@@ -9,15 +9,32 @@ import Message from "../assets/img/onboardingPage/message.png";
 import Save from "../assets/img/onboardingPage/save.png";
 import BlackSave from "../assets/img/onboardingPage/blackSave.png";
 import Send from "../assets/img/onboardingPage/send.png";
+import { Button, Menu, Divider, Provider } from 'react-native-paper';
 const HomeItem = () => {
     const [countHeart, setCountHeart] = useState(1);
     const [countSave, setCountSave] = useState(1);
+    const [visible, setVisible] = React.useState(false);
+    const openMenu = () => setVisible(true);
+    const closeMenu = () => setVisible(false);
   return (
     <View style={homeStyle.container}>
        <View style={homeStyle.shareContainer}>
           <View style={homeStyle.share}>
           <Image style={homeStyle.miniResim} source={test}></Image>
           <Text style={homeStyle.postName}>Your NickName</Text>
+          {/* <Provider>
+      <View style={homeStyle.touchRight}>
+        <Menu style={{position:"absolute",left:0,}}
+          visible={visible}
+          onDismiss={closeMenu}
+          anchor={<Button onPress={openMenu}><Image source={ThreeDot}></Image></Button>}>
+          <Menu.Item onPress={() => {}} title="Item 1" />
+          <Menu.Item onPress={() => {}} title="Item 2" />
+          <Divider />
+          <Menu.Item onPress={() => {}} title="Item 3" />
+        </Menu>
+      </View>
+    </Provider> */}
           <TouchableOpacity style={homeStyle.touchRight}>
           <Image source={ThreeDot} style={homeStyle.save}></Image>
             </TouchableOpacity>
