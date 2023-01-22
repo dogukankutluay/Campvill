@@ -8,6 +8,8 @@ import locationViewStyle from './locationView';
 import addTeamMatesStyle from './addTeamMates';
 import homeStyle from './home';
 import prepareStyle from './prepare';
+import teamMatesProfile from './teamMatesProfile';
+import teamMates from '../components/teamMatests/teamMates';
 export {
   locationSearchStyle,
   locationViewStyle,
@@ -19,4 +21,6 @@ export {
   addTeamMatesStyle,
   homeStyle,
   prepareStyle,
+  teamMatesProfile,
+  teamMates,
 };

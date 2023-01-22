@@ -6,6 +6,12 @@ import Plus from '../assets/img/plus.png';
 
 import {PrePareItem, CustomButton} from '../components';
 const Prepare = () => {
+  const preParies = [
+    'Sleeping Bag',
+    'Pillow',
+    'Sleeping mat or camp bed (If tent camping)',
+  ];
+
   return (
     <View style={prepareStyle.container}>
       <StatusBar backgroundColor={'#fafafa'} barStyle="dark-content" />
@@ -17,9 +23,9 @@ const Prepare = () => {
         <Image style={prepareStyle.plusItem} source={Plus} />
       </View>
       <View style={prepareStyle.prePareItems}>
-        <PrePareItem />
-        <PrePareItem />
-        <PrePareItem />
+        {preParies.map((prePare, index) => (
+          <PrePareItem labelText={prePare} key={index} />
+        ))}
       </View>
 
       <View style={{alignItems: 'center'}}>

@@ -13,6 +13,8 @@ import AddTeamMates from './AddTeamMates';
 import Activities from './Activities';
 import Home from './Home';
 import Prepare from './Prepare';
+import TeamMatesProfile from './TeamMatesProfile';
+import TeamMates from './TeamMates';
 export {
   LocationSearch,
   LocationView,
@@ -29,4 +31,6 @@ export {
   Activities,
   Home,
   Prepare,
+  TeamMatesProfile,
+  TeamMates,
 };

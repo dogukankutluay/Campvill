@@ -18,6 +18,8 @@ import {
   Activities,
   Home,
   Prepare,
+  TeamMatesProfile,
+  TeamMates,
 } from './screens';
 // Stack
 
@@ -26,7 +28,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="TeamMates"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="StartPage" component={StartPage} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
@@ -43,6 +45,8 @@ const App = () => {
         <Stack.Screen name="Activities" component={Activities} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Prepare" component={Prepare} />
+        <Stack.Screen name="TeamMatesProfile" component={TeamMatesProfile} />
+        <Stack.Screen name="TeamMates" component={TeamMates} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,6 +6,7 @@ import Card from './Card';
 import AddTripDatePicker from './AddTripDatePicker';
 import Footer from './Footer';
 import PrePareItem from './PrePareItem';
+import TeamMatesItem from './TeamMatesItem';
 export {
   Card,
   PrePareItem,
@@ -15,4 +16,5 @@ export {
   AuthAfterContainer,
   AddTripDatePicker,
   Footer,
+  TeamMatesItem,
 };
