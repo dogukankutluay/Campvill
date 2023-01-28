@@ -7,7 +7,6 @@ const teamMates = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: Dimensions.get('window').width,
     paddingHorizontal: 20,
     marginTop: 20,
     marginBottom: 24,

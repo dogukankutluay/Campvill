@@ -9,7 +9,7 @@ import addTeamMatesStyle from './addTeamMates';
 import homeStyle from './home';
 import prepareStyle from './prepare';
 import teamMatesProfile from './teamMatesProfile';
-import teamMates from '../components/teamMatests/teamMates';
+import teamMates from './teamMates';
 export {
   locationSearchStyle,
   locationViewStyle,
