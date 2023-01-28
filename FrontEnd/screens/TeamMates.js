@@ -44,8 +44,6 @@ const TeamMates = ({navigation}) => {
         </TouchableOpacity>
         <Text style={teamMates.headerText}>TeamMate</Text>
       </View>
-
-      <Text>TeamMates</Text>
       <ScrollView>
         {teamMateItem.map((item, index) => (
           <TeamMatesItem name={item.name} image={item.image} key={index} />

@@ -5,6 +5,7 @@ import authAfterContainerStyle from './authAfterContainerStyle';
 import cardStyle from './cardStyle';
 import addTripDatePickerStlye from './addTripDatePicker';
 import prePareItemStyle from './prePareItemStyle';
+import teamMatesItem from './teamMatesItem';
 export {
   buttonStyle,
   prePareItemStyle,
@@ -13,4 +14,5 @@ export {
   authAfterContainerStyle,
   cardStyle,
   addTripDatePickerStlye,
+  teamMatesItem,
 };
